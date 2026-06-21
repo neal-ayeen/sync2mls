@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listings - Sync2MLS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="listings.css" />
+    <link rel="stylesheet" href="sync2mls-theme.css" />
+    <link rel="stylesheet" href="listing-images.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>Sync2<span>MLS</span></span></a><nav class="main-nav"><a href="index.html"><span>⌂</span> Overview</a><a class="active" href="listings.html"><span>▦</span> Listings <b id="listingNavCount">12</b></a><a href="status.html"><span>◉</span> Status</a><a href="index.html#calendar"><span>◷</span> Calendar</a><a href="index.html#insights"><span>◌</span> Insights</a></nav><div class="sidebar-bottom"><a href="index.html" data-toast="Settings are available in the main workspace"><span>⚙</span> Settings</a><button class="user-card" data-toast="Profile menu opened"><div class="avatar">AM</div><div><strong>Alex Morgan</strong><small>Broker account</small></div><span>⌄</span></button></div></aside>
+      <main>
+        <header class="topbar"><a href="index.html">← Back to workspace</a><div><button class="icon-button" data-toast="You have 3 listing updates">♧<em></em></button><button class="help-button" data-toast="Support center opened">Need help? ↗</button></div></header>
+        <section class="page-intro"><div><p class="eyebrow">PROPERTY PORTFOLIO</p><h1>All listings</h1><p>Search, filter, and open every property in your workspace.</p></div><a class="primary-button" href="index.html">＋ New listing</a></section>
+        <section class="listing-tools"><label class="search"><span>⌕</span><input id="searchListings" placeholder="Search by address, city, or status" /></label><div class="filters" role="group" aria-label="Listing status filters"><button class="filter active" data-filter="all">All <b id="allCount">0</b></button><button class="filter" data-filter="For sale">For sale <b id="forSaleCount">0</b></button><button class="filter" data-filter="Listing">Listing <b id="listingCount">0</b></button><button class="filter" data-filter="Coming soon">Coming soon <b id="comingSoonCount">0</b></button></div><button class="sort-button" id="sortButton">Newest first ⌄</button></section>
+        <section class="results-bar"><span id="resultCount">0 listings</span><button data-toast="Grid view selected">▦ Grid</button></section>
+        <section class="listing-grid" id="listingGrid"></section>
+      </main>
+    </div>
+    <dialog id="listingDialog"><form method="dialog"><button class="close" aria-label="Close">×</button><p class="eyebrow">PROPERTY OVERVIEW</p><h2></h2><p class="property-location"></p><div class="property-stats"></div><div class="property-description">Review the full property record, marketing materials, documents, and appointment history from the main workspace.</div><div class="dialog-actions"><button class="secondary-button">Close</button><button class="primary-button">Edit listing <span>→</span></button></div></form></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="listings.js"></script>
+  </body>
+</html>

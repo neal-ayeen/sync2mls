@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing Studio — Real estate workspace</title>
+    <meta name="description" content="A refined real estate listing management workspace." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="interactions.css" />
+    <link rel="stylesheet" href="wizard.css" />
+    <link rel="stylesheet" href="clickable.css" />
+    <link rel="stylesheet" href="details.css" />
+    <link rel="stylesheet" href="description.css" />
+    <link rel="stylesheet" href="description-fix.css" />
+    <link rel="stylesheet" href="calendar-status.css" />
+    <link rel="stylesheet" href="profile-billing.css" />
+    <link rel="stylesheet" href="calendar-appointments.css" />
+    <link rel="stylesheet" href="sync2mls-theme.css" />
+    <link rel="stylesheet" href="upload-fix.css" />
+    <link rel="stylesheet" href="upload-documents.css" />
+    <link rel="stylesheet" href="asset-preview.css" />
+    <link rel="stylesheet" href="asset-remove.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" data-action="home" aria-label="Sync2MLS home"><span class="brand-mark">S</span><span>Sync2<span>MLS</span></span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="active" href="#top" data-nav="overview"><span>⌂</span> Overview</a>
+          <a href="listings.html" data-nav="listings"><span>▦</span> Listings <b>12</b></a>
+          <a href="status.html" data-nav="status"><span>◉</span> Status</a>
+          <a href="#calendar" data-nav="calendar"><span>◷</span> Calendar</a>
+          <a href="#insights" data-nav="insights"><span>◌</span> Insights</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <a href="#settings" data-nav="settings"><span>⚙</span> Settings</a>
+          <div class="user-card"><div class="avatar">AM</div><div><strong>Alex Morgan</strong><small>Broker account</small></div><button id="profileMenu" aria-label="Open user menu" aria-expanded="false">⌄</button></div>
+          <div class="profile-popover" id="profilePopover" hidden><button data-toast="Profile settings opened">My profile</button><button data-toast="You are already signed in">Account & billing</button><button data-toast="Signed out successfully">Sign out</button></div>
+        </div>
+      </aside>
+
+      <main id="top">
+        <header class="topbar">
+          <button class="mobile-menu" aria-label="Open menu" aria-expanded="false">☰</button>
+          <div class="crumb"><span>Workspace</span><i>/</i><strong>Overview</strong></div>
+          <div class="top-actions"><button class="icon-button" data-toast="You have 3 listing updates to review" aria-label="Notifications">♧<em></em></button><button class="help-button" data-toast="Support center opened — we’ll get you sorted.">Need help? <span>↗</span></button></div>
+        </header>
+
+        <section class="hero">
+          <div><p class="eyebrow">MONDAY, OCTOBER 21</p><h1>Good morning, Alex<span class="sun">✦</span></h1><p class="intro">You have <strong>3 listings</strong> that need your attention today.</p></div>
+          <button class="primary-button" id="newListing"><span>＋</span> New listing</button>
+        </section>
+
+        <section class="metrics" aria-label="Listing statistics">
+          <article class="click-card" data-toast="12 active listings in your portfolio"><span class="metric-icon indigo">▦</span><div><p>Active listings</p><strong>12</strong><small class="up">↑ 8.2% <i>vs. last month</i></small></div><span class="metric-spark">╱╲╱</span></article>
+          <article class="click-card" data-toast="Average time on market: 18 days"><span class="metric-icon amber">◴</span><div><p>Avg. days on market</p><strong>18 <small>days</small></strong><small class="down">↓ 2.4 days <i>vs. last month</i></small></div><span class="metric-spark amber-line">╲╱╲</span></article>
+          <article class="click-card" data-toast="Your active pipeline totals $8.4m"><span class="metric-icon green">◈</span><div><p>Pipeline value</p><strong>$8.4m</strong><small class="up">↑ 14.6% <i>vs. last month</i></small></div><span class="metric-spark">╱╱╲</span></article>
+        </section>
+
+        <section class="content-grid">
+          <section class="listing-panel" id="listings">
+            <div class="section-heading"><div><p class="eyebrow">YOUR PORTFOLIO</p><h2>Active listings</h2></div><a href="#all-listings" data-toast="All 12 listings are available in the Listings view">View all <span>→</span></a></div>
+            <div class="listing-grid">
+              <article class="property-card" data-property="14 Montague Terrace"><div class="property-image home-one"><span class="status">FOR SALE</span><button class="save-button" aria-label="Save listing">♡</button></div><div class="property-info"><p>Brooklyn Heights, NY</p><h3>$1,850,000</h3><div><span>3 beds</span><i></i><span>2.5 baths</span><i></i><span>1,940 sq ft</span></div></div><footer><span>Updated 2h ago</span><button class="more-button">•••</button></footer></article>
+              <article class="property-card" data-property="8 Sterling Place"><div class="property-image home-two"><span class="status">FOR SALE</span><button class="save-button" aria-label="Save listing">♡</button></div><div class="property-info"><p>Park Slope, NY</p><h3>$2,275,000</h3><div><span>4 beds</span><i></i><span>3 baths</span><i></i><span>2,350 sq ft</span></div></div><footer><span>Updated yesterday</span><button class="more-button">•••</button></footer></article>
+              <article class="property-card" data-property="75 Berry Street, Unit 4B"><div class="property-image home-three"><span class="status muted">PENDING</span><button class="save-button" aria-label="Save listing">♡</button></div><div class="property-info"><p>Williamsburg, NY</p><h3>$1,420,000</h3><div><span>2 beds</span><i></i><span>2 baths</span><i></i><span>1,280 sq ft</span></div></div><footer><span>Updated Oct 17</span><button class="more-button">•••</button></footer></article>
+            </div>
+          </section>
+
+          <aside class="attention-panel" id="insights"><div class="section-heading"><div><p class="eyebrow">TODAY'S FOCUS</p><h2>Needs attention</h2></div><button class="more" aria-label="More options">•••</button></div><div class="attention-list"><article><span class="task-dot coral"></span><div><strong>Update property photos</strong><p>14 Montague Terrace</p></div><button>→</button></article><article><span class="task-dot gold"></span><div><strong>Review showing feedback</strong><p>8 Sterling Place</p></div><button>→</button></article><article><span class="task-dot blue"></span><div><strong>Complete listing details</strong><p>75 Berry Street, Unit 4B</p></div><button>→</button></article></div><a class="task-link" href="#tasks">See all tasks <span>→</span></a></aside>
+        </section>
+
+        <section class="lower-grid" id="calendar"><section class="activity"><div class="section-heading"><div><p class="eyebrow">LAST 7 DAYS</p><h2>Portfolio activity</h2></div><button class="select">This week⌄</button></div><div class="chart"><div class="chart-labels"><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span></div><div class="chart-bars"><div style="--h:30%"><i></i><span>Mon</span></div><div style="--h:48%"><i></i><span>Tue</span></div><div style="--h:36%"><i></i><span>Wed</span></div><div style="--h:70%"><i></i><span>Thu</span></div><div style="--h:55%"><i></i><span>Fri</span></div><div style="--h:84%"><i></i><span>Sat</span></div><div style="--h:62%"><i></i><span>Sun</span></div></div></div><div class="chart-key"><span><i class="key-view"></i> Listing views <strong>284</strong></span><span><i class="key-lead"></i> New leads <strong>18</strong></span></div></section><section class="next-up"><div class="section-heading"><div><p class="eyebrow">COMING UP</p><h2>Next on your calendar</h2></div><a href="#calendar">View calendar</a></div><article><time><b>23</b><span>OCT</span></time><div><strong>Private showing</strong><p>14 Montague Terrace · 10:30 AM</p></div><button>↗</button></article><article><time><b>24</b><span>OCT</span></time><div><strong>Open house</strong><p>8 Sterling Place · 12:00 PM</p></div><button>↗</button></article></section></section>
+      </main>
+    </div>
+    <dialog id="listingModal" class="listing-wizard"><form id="listingForm"><button class="close" type="button" aria-label="Close">×</button><div class="wizard-top"><div><p class="eyebrow">CREATE A LISTING</p><h2>Bring a property to market</h2></div><span class="step-count">Step <b id="stepNumber">1</b> of 5</span></div><ol class="wizard-steps" aria-label="Listing creation progress"><li class="current">Basics</li><li>Location</li><li>Property</li><li>Marketing</li><li>Review</li></ol><section class="wizard-page active" data-step="1"><h3>Listing basics</h3><p>Start with the information buyers see first.</p><div class="form-grid"><label>Listing type<select required><option value="">Choose type</option><option>For sale</option><option>For rent</option><option>Coming soon</option></select></label><label>Property type<select required><option value="">Choose type</option><option>Single family home</option><option>Condominium</option><option>Townhouse</option><option>Multi-family</option><option>Land</option><option>Manufactured home</option></select></label><label>List price<input required inputmode="numeric" placeholder="$ 0" /></label><label>Availability date<input type="date" /></label><label>MLS number<input placeholder="Optional" /></label><label>Listing status<select><option>Active</option><option>Coming soon</option><option>Pending</option></select></label></div></section><section class="wizard-page" data-step="2"><h3>Location</h3><p>Use the full property address so the listing is easy to find.</p><div class="form-grid"><label class="full">Street address<input required placeholder="e.g. 22 W 11th Street" /></label><label>Unit / apartment<input placeholder="Optional" /></label><label>Neighborhood<input placeholder="e.g. West Village" /></label><label>City<input required placeholder="City" /></label><label>State / province<input required placeholder="State" /></label><label>ZIP / postal code<input required placeholder="ZIP code" /></label><label>Country<select><option>United States</option><option>Canada</option><option>Other</option></select></label><label>School district<input placeholder="Optional" /></label></div></section><section class="wizard-page" data-step="3"><h3>Property facts & features</h3><p>These details help buyers compare homes with confidence.</p><div class="form-grid"><label>Bedrooms<input required type="number" min="0" placeholder="0" /></label><label>Bathrooms<input required type="number" min="0" step="0.5" placeholder="0" /></label><label>Living area (sq ft)<input type="number" min="0" placeholder="0" /></label><label>Lot size<input placeholder="e.g. 0.12 acres" /></label><label>Year built<input type="number" min="1700" max="2100" placeholder="YYYY" /></label><label>Stories<input type="number" min="1" placeholder="1" /></label><label>Parking<select><option>Not specified</option><option>Garage</option><option>Driveway</option><option>Street parking</option><option>Carport</option></select></label><label>HOA fee / month<input inputmode="numeric" placeholder="$ 0" /></label><label>Annual property tax<input inputmode="numeric" placeholder="$ 0" /></label><label>Heating<input placeholder="e.g. Forced air" /></label><label>Cooling<input placeholder="e.g. Central air" /></label><label>Water / sewer<input placeholder="e.g. Public water & sewer" /></label><label class="full">Interior features<textarea placeholder="Fireplace, kitchen updates, flooring, appliances, accessibility features…"></textarea></label><label class="full">Exterior features<textarea placeholder="Pool, patio, roof, views, fencing, landscaping, community amenities…"></textarea></label></div></section><section class="wizard-page" data-step="4"><h3>Photos, description & contact</h3><p>Tell the story, then give buyers a clear way to get in touch.</p><div class="form-grid"><label class="full file-field">Listing photos<input type="file" accept="image/*" multiple /><span>Choose photos or drag them here <small>JPEG, PNG, or WEBP · up to 50 photos</small></span></label><label class="full">Virtual tour link<input type="url" placeholder="https://" /></label><label class="full">Property description<textarea required placeholder="Highlight the home’s setting, key updates, special features, and what makes it memorable."></textarea></label><label>Open house date<input type="datetime-local" /></label><label>Financing options<input placeholder="e.g. Cash, conventional, FHA" /></label><label>Listing agent name<input required placeholder="Full name" /></label><label>Agent email<input required type="email" placeholder="name@agency.com" /></label><label>Agent phone<input placeholder="(000) 000-0000" /></label><label>Brokerage<input placeholder="Brokerage name" /></label><label class="full check-field"><input type="checkbox" required /><span>I confirm that this information is accurate and that I’m authorized to market this property.</span></label></div></section><section class="wizard-page" data-step="5"><h3>Review your listing</h3><p>Everything is ready for a final check. You can still edit any section before saving a draft.</p><div class="review-card"><span class="review-icon">✓</span><div><strong>Complete listing profile</strong><p>Your address, facts, features, marketing details, and contact fields are collected in this draft.</p></div></div><div class="review-notes"><span>Included in the property record</span><div><b>✓</b> Pricing & listing status <b>✓</b> Full property facts <b>✓</b> Home features & utilities <b>✓</b> Marketing media & description <b>✓</b> Agent & brokerage contact</div></div></section><footer class="wizard-footer"><button class="secondary-button" type="button" id="previousStep" hidden>← Back</button><span></span><button class="primary-button" type="button" id="nextStep">Continue <span>→</span></button><button class="primary-button" type="submit" id="saveListing" hidden>Save listing draft <span>→</span></button></footer></form></dialog>
+    <dialog id="settingsModal"><form method="dialog"><button class="close" aria-label="Close">×</button><p class="eyebrow">WORKSPACE SETTINGS</p><h2>Tailor your workspace</h2><p>Choose how Listing Studio keeps you in the loop.</p><div class="setting-row"><div><strong>Showing reminders</strong><span>Get a reminder before each event</span></div><label class="switch"><input type="checkbox" checked /><i></i></label></div><div class="setting-row"><div><strong>Weekly activity digest</strong><span>Receive a portfolio summary every Monday</span></div><label class="switch"><input type="checkbox" checked /><i></i></label></div><div class="setting-row"><div><strong>New lead alerts</strong><span>Be notified as leads arrive</span></div><label class="switch"><input type="checkbox" /><i></i></label></div><button class="primary-button" value="close">Save preferences <span>→</span></button></form></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

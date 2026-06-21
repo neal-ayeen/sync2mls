@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Status — Listing Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="status-page.css" />
+    <link rel="stylesheet" href="status-interactions.css" />
+    <link rel="stylesheet" href="sync2mls-theme.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html"><span class="brand-mark">S</span><span>Sync2<span>MLS</span></span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html"><span>⌂</span> Overview</a>
+          <a href="listings.html"><span>▦</span> Listings <b>12</b></a>
+          <a class="active" href="status.html"><span>◉</span> Status</a>
+          <a href="index.html#calendar"><span>◷</span> Calendar</a>
+          <a href="index.html#insights"><span>◌</span> Insights</a>
+        </nav>
+        <div class="sidebar-bottom"><a href="index.html" data-toast="Settings are available in the main workspace"><span>⚙</span> Settings</a><button class="user-card" data-toast="Profile menu opened"><div class="avatar">AM</div><div><strong>Alex Morgan</strong><small>Broker account</small></div><span>⌄</span></button></div>
+      </aside>
+      <main>
+        <header class="topbar"><a class="back-link" href="index.html">← Back to workspace</a><span>Property portfolio / Status</span></header>
+        <section class="intro"><div><p class="eyebrow">PROPERTY PORTFOLIO</p><h1>Listing status</h1><p>Every property has a home. Open a folder to review the listings at that stage.</p></div><a class="primary-button" href="index.html">＋ New listing</a></section>
+        <section class="status-overview"><button class="status-card" data-folder="for-sale"><span>FOR SALE</span><strong id="forSaleCount">0</strong><p>Live on the market</p><i>Open folder →</i></button><button class="status-card" data-folder="listing"><span>LISTING</span><strong id="listingCount">0</strong><p>Drafts and active preparation</p><i>Open folder →</i></button><button class="status-card" data-folder="coming-soon"><span>COMING SOON</span><strong id="comingSoonCount">0</strong><p>Not yet public</p><i>Open folder →</i></button></section>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        <section class="folders" aria-label="Property status folders">
+          <details class="folder for-sale" open><summary><span class="folder-icon">▰</span><div><p>FOR SALE</p><h2>For sale <b id="forSaleFolderCount">0</b></h2><small>Properties currently available to buyers</small></div><i>⌄</i></summary><div class="folder-content" id="forSaleList"></div></details>
+          <details class="folder listing"><summary><span class="folder-icon">▰</span><div><p>LISTING</p><h2>Listing <b id="listingFolderCount">0</b></h2><small>Properties being prepared or reviewed</small></div><i>⌄</i></summary><div class="folder-content" id="listingList"></div></details>
+          <details class="folder coming-soon"><summary><span class="folder-icon">▰</span><div><p>COMING SOON</p><h2>Coming soon <b id="comingSoonFolderCount">0</b></h2><small>Properties scheduled for launch</small></div><i>⌄</i></summary><div class="folder-content" id="comingSoonList"></div></details>
+        </section>
+      </main>
+    </div>
+    <dialog id="propertyDialog"><form method="dialog"><button class="close" aria-label="Close">×</button><p class="eyebrow">PROPERTY DETAILS</p><h2></h2><p></p><button class="primary-button">Close <span>→</span></button></form></dialog>
+    <script src="status-page.js"></script>
+  </body>
+</html>
